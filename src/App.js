@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HeaderComponent from "./components/header";
 import NewTask from "./components/newTask/newTask";
 import TaskList from "./components/items/taskList";
-import { GlobalStyle, PageContainer } from "./styles";
+import { GlobalStyle, PageContainer, ColorChanger, ColorInput } from "./styles";
 
 const existingTasks = [
   {
@@ -20,21 +20,33 @@ const existingTasks = [
 ];
 
 const App = () => {
-  const [items, setItems] = useState(existingTasks);
+  // adding an entered task to the To-Do List:
 
-  const addItemHandler = (item) => {
-    setItems((prevItems) => {
-      return [item, ...prevItems];
+  const [tasks, setTasks] = useState(existingTasks);
+  const addTaskHandler = (task) => {
+    setTasks((prevTasks) => {
+      return [task, ...prevTasks];
     });
   };
 
+  // changing the background color of the page:
+
+  const [backgroundColor, setBackgroundColor] = useState("#fcf0f2");
+  const colorChangeHandler = (event) => {
+    setBackgroundColor(event.target.value);
+  };
+
   return (
-    <div>
+    <div style={{ background: backgroundColor }}>
       <GlobalStyle />
       <PageContainer>
+        <ColorChanger>
+          Pick your color
+          <ColorInput type="color" onChange={colorChangeHandler} />
+        </ColorChanger>
         <HeaderComponent />
-        <NewTask onAddItem={addItemHandler} />
-        <TaskList items={items} />
+        <NewTask onAddTask={addTaskHandler} />
+        <TaskList items={tasks} />
       </PageContainer>
     </div>
   );

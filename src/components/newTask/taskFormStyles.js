@@ -32,6 +32,10 @@ export const Input = styled.input`
   border: 1px solid #ccc;
   width: 20rem;
   max-width: 100%;
+
+  &:focus {
+    outline-color: #9f5bb0;
+  }
 `;
 
 export const Textarea = styled.textarea`
@@ -44,7 +48,7 @@ export const Textarea = styled.textarea`
   height: 50px;
 
   &:focus {
-    border: 1px solid #9f5bb0;
+    outline-color: #9f5bb0;
   }
 `;
 
@@ -56,4 +60,9 @@ export const Button = styled.button`
   border: 1px solid #fff;
   border-radius: 5px;
   float: right;
+
+  &:hover {
+    background-color: #9f5bb0;
+    font-weight: 1000;
+  }
 `;

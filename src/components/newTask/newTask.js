@@ -2,15 +2,15 @@ import React from "react";
 import TaskForm from "./taskForm";
 
 const NewTask = (props) => {
-  const saveItemHandler = (enteredItemData) => {
-    const newItemData = {
-      ...enteredItemData,
+  const saveTaskHandler = (enteredTaskData) => {
+    const newTaskData = {
+      ...enteredTaskData,
       id: Math.random().toString()
     };
-    props.onAddItem(newItemData);
+    props.onAddTask(newTaskData);
   };
 
-  return <TaskForm onSaveItem={saveItemHandler} />;
+  return <TaskForm onSaveTask={saveTaskHandler} />;
 };
 
 export default NewTask;

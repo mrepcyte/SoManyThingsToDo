@@ -4,12 +4,12 @@ import TaskItem from "./taskItem";
 export const TaskList = (props) => {
   return (
     <div>
-      {props.items.map((item) => (
+      {props.items.map((task) => (
         <TaskItem
-          key={item.id}
-          title={item.title}
-          date={item.date}
-          description={item.description}
+          key={task.id}
+          title={task.title}
+          date={task.date}
+          description={task.description}
         />
       ))}
     </div>

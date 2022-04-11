@@ -20,12 +20,12 @@ const TaskForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    const enteredItemData = {
+    const enteredTaskData = {
       title: enteredTitle,
       description: enteredDescription,
       date: new Date(enteredDate)
     };
-    props.onSaveItem(enteredItemData);
+    props.onSaveTask(enteredTaskData);
     setEnteredTitle("");
     setEnteredDescription("");
     setEnteredDate("");
@@ -52,6 +52,7 @@ const TaskForm = (props) => {
         />
       </div>
       <div>
+        <button type="submit">Click me</button>
         <Button type="submit">add to my list</Button>
       </div>
     </Form>

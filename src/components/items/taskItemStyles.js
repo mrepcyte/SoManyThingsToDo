@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TaskItemContainer = styled.div`
   width: 100%;
-  margin: 30px 30px 30px -20px;
+  margin: 30px 3px 30px -20px;
   background-color: #dbc1e1;
   border-radius: 12px;
   display: flex;
@@ -11,6 +11,7 @@ export const TaskItemContainer = styled.div`
 
 export const TaskItemHeader = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0;
