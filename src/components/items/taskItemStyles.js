@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TaskItemContainer = styled.div`
-  width: 100%;
+  max-width: 100%;
   margin: 30px 3px 30px -20px;
   background-color: #dbc1e1;
   border-radius: 12px;

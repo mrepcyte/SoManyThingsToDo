@@ -25,6 +25,7 @@ const TaskForm = (props) => {
       description: enteredDescription,
       date: new Date(enteredDate)
     };
+    console.log(enteredTaskData);
     props.onSaveTask(enteredTaskData);
     setEnteredTitle("");
     setEnteredDescription("");
@@ -32,28 +33,34 @@ const TaskForm = (props) => {
   };
 
   return (
-    <Form onSubmit={submitHandler}>
+    <Form>
       <H2>Add a new task:</H2>
       <div>
         <Label>what do you need to do?</Label>
-        <Input type="text" onChange={titleChangeHandler} />
+        <Input type="text" value={enteredTitle} onChange={titleChangeHandler} />
       </div>
       <div>
         <Label>describe the task in a few words</Label>
-        <Textarea maxlength="500" onChange={descriptionChangeHandler} />
+        <Textarea
+          maxlength="500"
+          value={enteredDescription}
+          onChange={descriptionChangeHandler}
+        />
       </div>
       <div>
-        <Label>when should this be completed by?</Label>
+        <Label>when should this be completed?</Label>
         <Input
           type="date"
           min="2022-04-01"
           max="2032-12-31"
+          value={enteredDate}
           onChange={dateChangeHandler}
         />
       </div>
       <div>
-        <button type="submit">Click me</button>
-        <Button type="submit">add to my list</Button>
+        <Button type="submit" onClick={submitHandler}>
+          add to my list
+        </Button>
       </div>
     </Form>
   );

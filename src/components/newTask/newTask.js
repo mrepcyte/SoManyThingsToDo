@@ -7,6 +7,7 @@ const NewTask = (props) => {
       ...enteredTaskData,
       id: Math.random().toString()
     };
+    console.log(newTaskData);
     props.onAddTask(newTaskData);
   };
 

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Form = styled.div`
   border-radius: 12px;
+  max-width: 50%;
   background-color: #f7cd92;
   display: flex;
   flex-direction: column;
@@ -9,7 +10,6 @@ export const Form = styled.div`
   text-align: left;
   font-size: 12px;
   padding: 18px;
-  max-width: 680px;
   margin-left: -50px;
 `;
 

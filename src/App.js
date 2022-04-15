@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import chroma from "chroma-js";
 import HeaderComponent from "./components/header";
 import NewTask from "./components/newTask/newTask";
 import TaskList from "./components/items/taskList";
@@ -23,6 +24,7 @@ const App = () => {
   // adding an entered task to the To-Do List:
 
   const [tasks, setTasks] = useState(existingTasks);
+
   const addTaskHandler = (task) => {
     setTasks((prevTasks) => {
       return [task, ...prevTasks];
@@ -30,18 +32,22 @@ const App = () => {
   };
 
   // changing the background color of the page:
-
   const [backgroundColor, setBackgroundColor] = useState("#fcf0f2");
   const colorChangeHandler = (event) => {
     setBackgroundColor(event.target.value);
   };
 
   return (
-    <div style={{ background: backgroundColor }}>
+    <div
+      style={{
+        background: backgroundColor,
+        color: chroma(backgroundColor).luminance() < 0.3 ? "#fff" : "#000"
+      }}
+    >
       <GlobalStyle />
       <PageContainer>
         <ColorChanger>
-          Pick your color
+          pick your color
           <ColorInput type="color" onChange={colorChangeHandler} />
         </ColorChanger>
         <HeaderComponent />
