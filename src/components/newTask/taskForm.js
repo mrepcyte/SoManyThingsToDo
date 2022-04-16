@@ -25,7 +25,14 @@ const TaskForm = (props) => {
       description: enteredDescription,
       date: new Date(enteredDate)
     };
-    console.log(enteredTaskData);
+    // checking if the received object is empty:
+    const isEmpty = Object.values(enteredTaskData).some(
+      (x) => x === null || x === ""
+    );
+    if (isEmpty) {
+      alert("you forgot to put in all information!");
+      return;
+    }
     props.onSaveTask(enteredTaskData);
     setEnteredTitle("");
     setEnteredDescription("");

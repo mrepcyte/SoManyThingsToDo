@@ -10,13 +10,14 @@ const existingTasks = [
     id: "e1",
     title: "Come up with the title for a newsletter",
     date: new Date(2022, 4, 28),
-    description: "I need to decide on the new title"
+    description:
+      "Need to decide on the title for the upcoming issue - maybe something related to candy?"
   },
   {
     id: "e2",
-    title: "Learn React",
-    date: new Date(2022, 6, 1),
-    description: "Learn everything"
+    title: "Finish my learning projects",
+    date: new Date(2022, 9, 1),
+    description: "Refer to Notion planning timeline and act accordingly"
   }
 ];
 

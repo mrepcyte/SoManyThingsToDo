@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TaskItemContainer = styled.div`
-  max-width: 100%;
+  width: 600px;
   margin: 30px 3px 30px -20px;
   background-color: #dbc1e1;
   border-radius: 12px;
@@ -20,11 +20,11 @@ export const TaskItemHeader = styled.div`
 
 export const TaskItemH3 = styled.h3`
   font-size: 16px;
-  padding-left: 20px;
+  margin: 10px auto 0 auto;
 `;
 
 export const TaskItemDate = styled.div`
-  padding-right: 20px;
+  margin: 0 auto;
 `;
 
 export const TaskItemDescription = styled.p`

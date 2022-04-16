@@ -18,7 +18,6 @@ const TaskItem = (props) => {
         </TaskItemDate>
       </TaskItemHeader>
       <TaskItemDescription>{props.description}</TaskItemDescription>
-      <button>delete</button>
     </TaskItemContainer>
   );
 };
