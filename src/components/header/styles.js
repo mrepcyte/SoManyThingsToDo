@@ -11,6 +11,14 @@ export const H1 = styled.h1`
   max-width: 450px;
   font-size: 22px;
   background-color: #dbc1e1;
+
+  @media (max-width: 700px) {
+    max-width: 300px;
+  }
+
+  @media (max-width: 420px) {
+    max-width: 260px;
+  }
 `;
 
 export const Instructions = styled.p`
@@ -21,4 +29,9 @@ export const Instructions = styled.p`
   margin: 14px auto;
   padding: 12px;
   font-size: 14px;
+
+  @media (max-width: 700px) {
+    max-width: 450px;
+    padding: 20px;
+  }
 `;

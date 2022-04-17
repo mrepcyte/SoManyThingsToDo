@@ -38,6 +38,11 @@ export const ColorChanger = styled.div`
   &:hover {
     background-color: #9f5bb0;
   }
+
+  @media (max-width: 780px) {
+    padding: 8px;
+    font-size: 10px;
+  }
 `;
 
 export const ColorInput = styled.input`

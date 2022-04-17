@@ -18,7 +18,7 @@ const TaskForm = (props) => {
     setEnteredDate(event.target.value);
   };
 
-  const submitHandler = (event) => {
+  const clickHandler = (event) => {
     event.preventDefault();
     const enteredTaskData = {
       title: enteredTitle,
@@ -65,7 +65,7 @@ const TaskForm = (props) => {
         />
       </div>
       <div>
-        <Button type="submit" onClick={submitHandler}>
+        <Button type="submit" onClick={clickHandler}>
           add to my list
         </Button>
       </div>

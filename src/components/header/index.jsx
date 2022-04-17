@@ -6,11 +6,12 @@ const HeaderComponent = () => {
     <div>
       <H1>so many things to do!</H1>
       <Instructions>
-        I practically loathe to-do lists - so much as one glance at the list of
-        pending tasks can throw me in a state of agitation. But I needed an idea
-        for my React project. So I decidated to create a cute pastel-colored
-        to-do list. It probably won't help me with restlesness, but hey, at
-        least it's beautiful.
+        I do NOT enjoy working with to-do lists - so much as one glance at the
+        list of pending tasks can throw me in a state of agitation. But I am one
+        of those people who believe that pastel colors make everything better,
+        so here I am, pretending to-do lists do not make me restless. Add one of
+        your own items below. Also feel free to change the color of the page, if
+        you wish.
       </Instructions>
     </div>
   );
