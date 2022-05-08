@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Form = styled.div`
   border-radius: 12px;
-  max-width: 50%;
+  max-width: 100%;
   background-color: #f7cd92;
   display: flex;
   flex-direction: column;
